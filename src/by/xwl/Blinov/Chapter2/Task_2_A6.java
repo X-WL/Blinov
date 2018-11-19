@@ -2,6 +2,7 @@ package by.xwl.Blinov.Chapter2;
 
 import by.xwl.Convert;
 import by.xwl.IO;
+import by.xwl.Information;
 
 import java.util.ArrayList;
 
@@ -35,5 +36,8 @@ public class Task_2_A6 {
         } else {
             System.out.println("Not result!");
         }
+        Information info = new Information("24.11.2018, 20:13");
+        info.printInformation();
+        IO.waitingPress();
     }
 }

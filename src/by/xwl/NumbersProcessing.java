@@ -166,6 +166,16 @@ public class NumbersProcessing {
         return out;
     }
 
+    /**
+     * This method return various digit value.
+     *
+     * @param input is (@code Number)
+     * @param <T>   is (@code Number)
+     * @return is (@code int)
+     * @author X-WL
+     * @see #getVariousDigit(Number)
+     * @see by.xwl.NumbersProcessing
+     */
     public static <T extends Number> int getVariousDigit(T input) {
         int[] number = new int[10];
         String str = Convert.toString(Math.abs(input.doubleValue()));
@@ -176,10 +186,67 @@ public class NumbersProcessing {
         }
         int variousNumber = 0;
         for (int i = 0; i < 10; i++) {
-            if (number[i]>0) {
+            if (number[i] > 0) {
                 variousNumber++;
             }
         }
         return variousNumber;
+    }
+
+    /**
+     * This method checked various digit number.
+     *
+     * @param input is (@code Number)
+     * @param <T>   is (@code Number)
+     * @return is (@code boolean)
+     * @author X-WL
+     * @see #checkVariousDigit(Number)
+     * @see by.xwl.NumbersProcessing
+     */
+    public static <T extends Number> boolean checkVariousDigit(T input) {
+        boolean is_Virious = true;
+        String str = Convert.toString(input);
+        if (str.length() <= 11) {
+            for (int i = 0; i < str.length(); i++) {
+                for (int j = 0; j < str.length(); j++) {
+                    if (i != j) {
+                        if (str.charAt(i) == str.charAt(j)) {
+                            is_Virious = false;
+                        }
+                    }
+                }
+            }
+        } else {
+            is_Virious = false;
+        }
+        return is_Virious;
+    }
+
+    /**
+     * This method return all polyndrom value from Array.
+     *
+     * @param input is (@code ArrayList)
+     * @param <T>   is (@code Number)
+     * @return is (@code ArrayList)
+     * @author X-WL
+     * @see #getPolyndromFromArray(ArrayList)
+     * @see by.xwl.NumbersProcessing
+     */
+    public static <T extends Number> ArrayList<T>
+    getPolyndromFromArray(ArrayList<T> input) {
+        ArrayList<T> out = new ArrayList<>();
+        for (int i = 0; i < input.size(); i++) {
+            boolean is_Polyndrom = true;
+            String str = Convert.toString(input.get(i));
+            for (int j = 0; j < str.length(); j++) {
+                if (str.charAt(j) != str.charAt(str.length() - j - 1)) {
+                    is_Polyndrom = false;
+                }
+            }
+            if (is_Polyndrom) {
+                out.add(input.get(i));
+            }
+        }
+        return out;
     }
 }

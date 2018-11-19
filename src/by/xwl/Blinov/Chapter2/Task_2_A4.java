@@ -23,7 +23,7 @@ public class Task_2_A4 {
         for (int i = incomingData.size() - 1; i >= 0; i--) {
             int tempVarios =
                     NumbersProcessing.getVariousDigit(incomingData.get(i));
-            if (tempVarios > valMaxVarious) {
+            if (tempVarios < valMaxVarious) {
                 idMaxVarious = i;
                 valMaxVarious = tempVarios;
             }
