@@ -13,7 +13,7 @@ public class IO {
     /**
      * This method working wish Keyboard and return (@code Double) Array.
      *
-     * @return (@ code ArrayList < Double >) incoming values.
+     * @return is (@code ArrayList<Double>) incoming values.
      * @see #parseDoubleArray()
      * @see by.xwl.IO
      */
@@ -78,6 +78,26 @@ public class IO {
     public static <T extends Number> void printArrayNumber(ArrayList<T> input) {
         for (int i = 0; i < input.size(); i++) {
             System.out.print(" " + Convert.toString(input.get(i)));
+        }
+        System.out.println();
+    }
+
+    /**
+     * This method (@code printArray) print Number Array. Integers are happen without a dot.
+     *
+     * @param input is (@code ArrayList)
+     * @param <T>   is type (@code Number)
+     * @author X-WL
+     * @see #printArrayNumber(ArrayList)
+     * @see by.xwl.IO
+     */
+    public static <T extends Number> void printArrayNumberWithLen(ArrayList<T> input) {
+        for (int i = 0; i < input.size(); i++) {
+            String str1 = Convert.toString(input.get(i));
+            String abs = Convert.toString(Math.abs(input.get(i).doubleValue()));
+            String str2 = Convert.toString(abs.length());
+            System.out.println(" Value: " + str1 +
+                    " Length: " + str2);
         }
         System.out.println();
     }

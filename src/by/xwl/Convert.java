@@ -7,7 +7,7 @@ package by.xwl;
 public class Convert {
     /**
      * This method (@code toString) implementation converting Number to String
-     * @param input is value type (@code <T>)
+     * @param input is value type (@code Number)
      * @param <T> is (@code Number) value
      * @return (@code String)
      *
