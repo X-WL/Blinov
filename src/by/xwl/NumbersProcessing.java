@@ -249,4 +249,40 @@ public class NumbersProcessing {
         }
         return out;
     }
+
+    /**
+     * This method check value od range.
+     *
+     * @param value is checked value
+     * @param range is checked range, format: "(3,5)"
+     * @param <T> is (@code Number)
+     * @return is (@code boolean)
+     */
+    public static <T extends Number> boolean checkRange(T value, String range) {
+        boolean out = true;
+        String strVal = range.substring(1, range.length() - 2);
+        System.out.println("strVal = " + strVal);
+        String[] str2Val = strVal.split(",");
+        double a = Double.valueOf(str2Val[0]);
+        double b = Double.valueOf(str2Val[1]);
+        if (range.charAt(0) == '(') {
+            if (!(a < value.doubleValue())) {
+                out = false;
+            }
+        } else {
+            if (!(a <= value.doubleValue())) {
+                out = false;
+            }
+        }
+        if (range.charAt(range.length() - 1) == ')') {
+            if (!(value.doubleValue() < b)) {
+                out = false;
+            }
+        } else {
+            if (!(value.doubleValue() <= b)) {
+                out = false;
+            }
+        }
+        return out;
+    }
 }

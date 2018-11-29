@@ -6,10 +6,9 @@ import by.xwl.Information;
 import by.xwl.NumbersProcessing;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**
- * This class (@code Task_2_A8) implementation Task Chapter 2 - A8
+ * This class (@code Task_2_A8) implementation Task Chapter 2 - A8.
  *
  * @author X-WL
  * @see by.xwl.Blinov.Chapter2

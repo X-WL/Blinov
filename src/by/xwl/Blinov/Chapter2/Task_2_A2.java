@@ -1,7 +1,7 @@
 package by.xwl.Blinov.Chapter2;
 
 /**
- * This class (@code Task_2_A2) implementation Task Chapter 2 - A2
+ * This class (@code Task_2_A2) implementation Task Chapter 2 - A2.
  *
  * @author X-WL
  * @see by.xwl.Blinov.Chapter2

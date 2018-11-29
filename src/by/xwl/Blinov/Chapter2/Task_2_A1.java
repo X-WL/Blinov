@@ -8,7 +8,7 @@ import by.xwl.NumbersProcessing;
 import java.util.ArrayList;
 
 /**
- * This class (@code Task_2_A1) implementation Task Chapter 2 - A1
+ * This class (@code Task_2_A1) implementation Task Chapter 2 - A1.
  * @author X-WL
  * @see by.xwl.Blinov.Chapter2
  */

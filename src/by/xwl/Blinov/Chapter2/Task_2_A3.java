@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * This class (@code Task_2_A3) implementation Task Chapter 2 - A3
+ * This class (@code Task_2_A3) implementation Task Chapter 2 - A3.
  * @author X-WL
  * @see by.xwl.Blinov.Chapter2
  */

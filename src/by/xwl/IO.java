@@ -11,9 +11,51 @@ import java.util.Scanner;
 
 public class IO {
     /**
+     * This method working wish Keyboard and return (@code int)
+     *
+     * @return is (@code int)
+     * @author X-WL
+     * @see #parseInteger()
+     * @see by.xwl.NumbersProcessing
+     */
+    public static int parseInteger() {
+        Scanner scanner = new Scanner(System.in);
+        int output = 0;
+        try {
+            String incomingArray = scanner.nextLine();
+            String[] stripArray = incomingArray.split(" ");
+            output = Integer.valueOf(stripArray[0]);
+        } catch (Exception ex) {
+            System.out.println("Error: " + ex.getMessage());
+        }
+        return output;
+    }
+
+    /**
+     * This method working wish Keyboard and return (@code double)
+     *
+     * @return is (@code double)
+     * @author X-WL
+     * @see #parseDouble()
+     * @see by.xwl.NumbersProcessing
+     */
+    public static double parseDouble() {
+        Scanner scanner = new Scanner(System.in);
+        double output = 0;
+        try {
+            String incomingArray = scanner.nextLine();
+            String[] stripArray = incomingArray.split(" ");
+            output = Double.valueOf(stripArray[0]);
+        } catch (Exception ex) {
+            System.out.println("Error: " + ex.getMessage());
+        }
+        return output;
+    }
+
+    /**
      * This method working wish Keyboard and return (@code Double) Array.
      *
-     * @return is (@code ArrayList<Double>) incoming values.
+     * @return is (@code ArrayList) incoming values.
      * @see #parseDoubleArray()
      * @see by.xwl.IO
      */
@@ -33,9 +75,81 @@ public class IO {
     }
 
     /**
+     * This method working wish Keyboard and return (@code Double) Array <= maximum values.
+     *
+     * @param maxValue is (@code int) set maximum element of array return
+     * @return is (@code ArrayList) incoming values.
+     * @see #parseDoubleArray()
+     * @see by.xwl.IO
+     */
+    public static ArrayList<Double> parseDoubleArray(int maxValue) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Double> output = new ArrayList<>();
+        try {
+            String incomingArray = scanner.nextLine();
+            String[] stripArray = incomingArray.split(" ");
+            int forValue = maxValue;
+            if (stripArray.length < forValue) {
+                forValue = stripArray.length;
+            }
+            for (int i = 0; i < forValue; i++) {
+                output.add(Double.valueOf(stripArray[i]));
+            }
+        } catch (Exception ex) {
+            System.out.println("Error: " + ex.getMessage());
+        }
+        return output;
+    }
+
+    /**
+     * This method working wish ARGS and return (@code Double) Array.
+     *
+     * @param args is (@code String[])
+     * @return is (@code ArrayList) incoming values.
+     * @see #parseDoubleArrayWishArgs(String[])
+     * @see by.xwl.IO
+     */
+    public static ArrayList<Double> parseDoubleArrayWishArgs(String[] args) {
+        ArrayList<Double> output = new ArrayList<>();
+        try {
+            for (int i = 0; i < args.length; i++) {
+                output.add(Double.valueOf(args[i]));
+            }
+        } catch (Exception ex) {
+            System.out.println("Error: " + ex.getMessage());
+        }
+        return output;
+    }
+
+    /**
+     * This method working wish ARGS and return (@code Double) Array <= maximum values.
+     *
+     * @param args     is (@code String[])
+     * @param maxValue is (code int) set maximum element of array return
+     * @return is (@code ArrayList) incoming values.
+     * @see #parseDoubleArrayWishArgs(String[], int)
+     * @see by.xwl.IO
+     */
+    public static ArrayList<Double> parseDoubleArrayWishArgs(String[] args, int maxValue) {
+        ArrayList<Double> output = new ArrayList<>();
+        try {
+            int forValue = maxValue;
+            if (args.length < forValue) {
+                forValue = args.length;
+            }
+            for (int i = 0; i < forValue; i++) {
+                output.add(Double.valueOf(args[i]));
+            }
+        } catch (Exception ex) {
+            System.out.println("Error: " + ex.getMessage());
+        }
+        return output;
+    }
+
+    /**
      * This method working wish Keyboard and return (@code Integer) Array.
      *
-     * @return (@ code ArrayList < Integer >) incoming values.
+     * @return is (@code ArrayList) incoming values.
      * @see #parseIntegerArray()
      * @see by.xwl.IO
      */

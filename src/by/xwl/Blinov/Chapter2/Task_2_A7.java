@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * This class (@code Task_2_A7) implementation Task Chapter 2 - A7
+ * This class (@code Task_2_A7) implementation Task Chapter 2 - A7.
  *
  * @author X-WL
  * @see by.xwl.Blinov.Chapter2
