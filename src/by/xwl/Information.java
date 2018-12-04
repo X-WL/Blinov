@@ -71,7 +71,6 @@ public class Information {
      * @see by.xwl.Information
      */
     public void printInformation() {
-        System.out.println();
         System.out.println("Name: " + authorName);
         System.out.println("Time Create Project: " + timeCreate);
         System.out.println("Time Run Project: " + timeRun);

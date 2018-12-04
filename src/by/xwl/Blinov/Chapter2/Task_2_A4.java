@@ -23,12 +23,13 @@ public class Task_2_A4 {
         for (int i = incomingData.size() - 1; i >= 0; i--) {
             int tempVarios =
                     NumbersProcessing.getVariousDigit(incomingData.get(i));
+            System.out.println("L:"+tempVarios);
             if (tempVarios < valMaxVarious) {
                 idMaxVarious = i;
                 valMaxVarious = tempVarios;
             }
         }
-        System.out.print("Result max various digit number: ");
+        System.out.print("Result min various digit number: ");
         System.out.println(Convert.toString(incomingData.get(idMaxVarious)));
         System.out.println("Various digit: " + valMaxVarious);
         Information info = new Information("23.11.2018, 20:13");

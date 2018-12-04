@@ -75,7 +75,7 @@ public class IO {
     }
 
     /**
-     * This method working wish Keyboard and return (@code Double) Array <= maximum values.
+     * This method working wish Keyboard and return (@code Double) Array  maximum values.
      *
      * @param maxValue is (@code int) set maximum element of array return
      * @return is (@code ArrayList) incoming values.
