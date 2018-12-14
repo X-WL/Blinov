@@ -34,7 +34,7 @@ public class Point2D {
      */
     public Point2D() {
         this.x = 0;
-        this.y = y;
+        this.y = 0;
     }
 
     public double getX() {
